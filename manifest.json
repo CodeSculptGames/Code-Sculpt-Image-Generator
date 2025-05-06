@@ -3,10 +3,10 @@
   "description": "This is an AI Image Generator. It creates an image from scratch from a text description",
   "dir": "ltr",
   "display": "standalone",
-  "name": "CodeSculpt AI Image Generator",
+  "name": "Code Sculpt Image Generator",
   "orientation": "any",
   "scope": "/",
-  "short_name": "CodeSculpt AI Image Generator",
+  "short_name": "Code Sculpt Image Generator",
   "start_url": "/",
   "theme_color": "#ffffff",
   "categories": [
@@ -48,7 +48,7 @@
   ],
   "shortcuts": [
     {
-      "name": "CodeSculpt AI Image Generator",
+      "name": "Code Sculpt Image Generator",
       "url": "",
       "description": "This is an AI Image Generator. It creates an image from scratch from a text description"
     }
