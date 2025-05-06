@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css"/>
+  <title>CodeSculpt AI Image Generator</title>
+</head>
+<body>
+  <div class="center-wrapper">
+    <img src="appname.png" alt="App Logo" class="logo" style="width: 200px; height: auto;" />
+    <h1>AI Image Generator</h1>
+    <p class="desc">This is an AI Image Generator. It creates an image from scratch from a text description.</p>
+    <div class="main">
+      <div class="sidebar">
+        <label>Create an image from text prompt</label>
+        <input type="text" id="prompt" placeholder="Enter your prompt here"/>
+        <button onclick="generateImage()">Generate</button>
+
+        <div class="section">
+          <label>Choose a model</label>
+          <div class="btn-group" id="model-options">
+            <button onclick="selectOption(this, 'model-options')" class="toggle active">Standard</button>
+            <button onclick="selectOption(this, 'model-options')" class="toggle">HD</button>
+            <button onclick="selectOption(this, 'model-options')" class="toggle">Genius</button>
+          </div>
+        </div>
+
+        <div class="section">
+          <label>Preference</label>
+          <div class="btn-group" id="preference-options">
+            <button onclick="selectOption(this, 'preference-options')" class="toggle active">Speed</button>
+            <button onclick="selectOption(this, 'preference-options')" class="toggle">Quality</button>
+          </div>
+          <label class="checkbox"><input type="checkbox" /> Use Olde Model</label>
+        </div>
+      </div>
+      <div class="preview">
+        <div id="loader" class="loader">⟳</div>
+        <img id="result" onclick="enlargeImage()" />
+        <p class="note">Click the image to open fullscreen. Right-click or long press to save.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal" class="modal" onclick="closeModal(event)">
+    <img id="modal-img" class="modal-content" />
+    <span class="close">&times;</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
